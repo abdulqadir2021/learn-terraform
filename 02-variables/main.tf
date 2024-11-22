@@ -9,5 +9,5 @@ output "URL" {
 
 # variable is a combination of some other string. Then we have to use ${}
 output "URL2" {
-    value = "URL - ${var.URL}"
+    value = "URL2 - ${var.URL}"
 }
