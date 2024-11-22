@@ -20,7 +20,7 @@ resource "aws_instance" "instance" {
     vpc_security_group_ids = ["sg-0880ecf773230947b"]
     tags = {
         Name = var.instances[count.index]
-    }
+      }
 }
 
 resource "aws_route53_record" "record" {
