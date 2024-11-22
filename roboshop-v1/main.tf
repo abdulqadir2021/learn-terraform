@@ -32,6 +32,14 @@ resource "aws_route53_record" "mongodb" {
   records = [aws_instance.frontend.private_ip]
 }
 
+resource "aws_route53_record" "mongodb" {
+  zone_id = "Z09687201RU9RU0QEJJY1"
+  name    = "mongodb-dev.abdulqadir.shop"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.mongodb.private_ip]
+}
+
 resource "aws_instance" "Catalogue" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
@@ -39,6 +47,14 @@ resource "aws_instance" "Catalogue" {
     tags = {
         Name = "Catalogue"
     }
+}
+
+resource "aws_route53_record" "catalogue" {
+  zone_id = "Z09687201RU9RU0QEJJY1"
+  name    = "catalogue-dev.abdulqadir.shop"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.catalogue.private_ip]
 }
 
 resource "aws_instance" "redis" {
@@ -50,6 +66,14 @@ resource "aws_instance" "redis" {
     }
 }
 
+resource "aws_route53_record" "redis" {
+  zone_id = "Z09687201RU9RU0QEJJY1"
+  name    = "redis-dev.abdulqadir.shop"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.redis.private_ip]
+}
+
 resource "aws_instance" "user" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
@@ -57,6 +81,14 @@ resource "aws_instance" "user" {
     tags = {
         Name = "user"
     }
+}
+
+resource "aws_route53_record" "user" {
+  zone_id = "Z09687201RU9RU0QEJJY1"
+  name    = "user-dev.abdulqadir.shop"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.user.private_ip]
 }
 
 resource "aws_instance" "Cart" {
@@ -68,6 +100,14 @@ resource "aws_instance" "Cart" {
     }
 }
 
+resource "aws_route53_record" "cart" {
+  zone_id = "Z09687201RU9RU0QEJJY1"
+  name    = "cart-dev.abdulqadir.shop"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.cart.private_ip]
+}
+
 resource "aws_instance" "mysql" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
@@ -75,6 +115,14 @@ resource "aws_instance" "mysql" {
     tags = {
         Name = "mysql"
     }
+}
+
+resource "aws_route53_record" "mysql" {
+  zone_id = "Z09687201RU9RU0QEJJY1"
+  name    = "mysql-dev.abdulqadir.shop"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.mysql.private_ip]
 }
 
 resource "aws_instance" "shipping" {
@@ -86,6 +134,14 @@ resource "aws_instance" "shipping" {
     }
 }
 
+resource "aws_route53_record" "shipping" {
+  zone_id = "Z09687201RU9RU0QEJJY1"
+  name    = "shipping-dev.abdulqadir.shop"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.shipping.private_ip]
+}
+
 resource "aws_instance" "rabbitmq" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
@@ -93,6 +149,14 @@ resource "aws_instance" "rabbitmq" {
     tags = {
         Name = "rabbitmq"
     }
+}
+
+resource "aws_route53_record" "rabbitmq" {
+  zone_id = "Z09687201RU9RU0QEJJY1"
+  name    = "rabbitmq-dev.abdulqadir.shop"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.rabbitmq.private_ip]
 }
 
 resource "aws_instance" "payment" {
@@ -104,6 +168,14 @@ resource "aws_instance" "payment" {
     }
 }
 
+resource "aws_route53_record" "payment" {
+  zone_id = "Z09687201RU9RU0QEJJY1"
+  name    = "payment-dev.abdulqadir.shop"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.payment.private_ip]
+}
+
 resource "aws_instance" "dispatch" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
@@ -111,4 +183,12 @@ resource "aws_instance" "dispatch" {
     tags = {
         Name = "dispatch"
     }
+}
+
+resource "aws_route53_record" "dispatch" {
+  zone_id = "Z09687201RU9RU0QEJJY1"
+  name    = "dispatch-dev.abdulqadir.shop"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.dispatch.private_ip]
 }
