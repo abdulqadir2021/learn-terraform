@@ -8,6 +8,6 @@ output "URL" {
 }
 
 # variable is a combination of some other string. Then we have to use ${}
-output "URL1" {
+output "URL2" {
     value = "URL - ${var.URL}"
 }
