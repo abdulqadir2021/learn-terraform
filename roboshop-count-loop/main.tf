@@ -1,15 +1,15 @@
 variable "instances" {
     default = [
-        "frontend"
-        "cart"
-        "catalogue"
-        "user"
-        "shipping"
-        "payment"
-        "mysql"
-        "mongodb"
-        "rabbitmq"
-        "redis"
+        "frontend",
+        "cart",
+        "catalogue",
+        "user",
+        "shipping",
+        "payment",
+        "mysql",
+        "mongodb",
+        "rabbitmq",
+        "redis",
         ]
     }
 
