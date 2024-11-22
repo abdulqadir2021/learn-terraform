@@ -42,6 +42,7 @@ variable "list1" {
 }
 
 # List can have a combination of multiple data types also.
+
 variable "map1" {
   default = {
       aws = {
