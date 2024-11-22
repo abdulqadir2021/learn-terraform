@@ -1,4 +1,4 @@
-variable "url" {
+variable "URL" {
     default = "example.com"
 }
 
