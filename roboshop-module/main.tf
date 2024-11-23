@@ -1,6 +1,7 @@
+
 module "roboshop" {
   for_each = var.instances
-  source = "./nodule"
+  source = "./module"
   component_name = each.key
 }
 
