@@ -8,7 +8,7 @@ variable "instances" {
 
 module "ec2" {
   count = length(var.instances)
-  source        = "./ec2"
+  source        = "../ec2"
   instance_name = var.instances[count.index]
 }
 
@@ -19,7 +19,7 @@ output "ip" {
 
 module "route53" {
   count = length(var.instances)
-  source = "./route53"
+  source = ""
   instance_name = var.instances[count.index]
   ip_address = module.ec2.ip_address[count.index]
 }
