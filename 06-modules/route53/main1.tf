@@ -4,7 +4,7 @@ resource "aws_route53_record" "record" {
   name    = "${var.instance_name}-dev.abdulqadir.shop"
   type    = "A"
   ttl     = "30"
-  records = [var.ip_addrress]
+  records = [var.ip_address]
 }
 
 variable "instance_name" {}
