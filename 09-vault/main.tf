@@ -13,6 +13,6 @@ data "vault_kv_secret_v2" "example" {
 }
 
 resource "local_file" "foo" {
-  content  = "data.vault_kv_secret.v2.example"
+  content  = "data.vault_kv_secret.v2.example.data"
   filename = "/tmp/secret"
 }
