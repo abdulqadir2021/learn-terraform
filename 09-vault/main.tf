@@ -13,10 +13,10 @@ data "vault_kv_secret_v2" "example" {
 }
 
 resource "local_file" "foo" {
-  content  = jsonencode(data.vault_kv_secret_v2.example.data_json)
+  content  = data.vault_kv_secret_v2.example.data_json["password"]
   filename = "/tmp/secret"
 }
 
-output "json" {
-  value = data.vault_kv_secret_v2.example.data_json
-}
+# output "json" {
+#  value = data.vault_kv_secret_v2.example.data_json
+# }
