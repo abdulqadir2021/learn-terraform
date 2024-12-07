@@ -1,5 +1,5 @@
 provider "vault" {
-  address = "https://172.31.16.175:8200"
+  address = "http://172.31.16.175:8200"
   token   = var.vault_token
   skip_tls_verify = true
 }
@@ -7,7 +7,7 @@ provider "vault" {
 variable "vault_token" {}
 
 data "vault_generic_secret" "example" {
-  path = "tets/my_credentials"
+  path = "test/my_credentials"
 }
 
 # data "vault_kv_secret_v2" "example" {
