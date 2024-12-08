@@ -24,3 +24,4 @@ resource "local_file" "foo" {
 # output "json" {
 #  value = data.vault_kv_secret_v2.example.data_json
 # }
+
