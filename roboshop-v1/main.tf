@@ -54,7 +54,7 @@ resource "aws_route53_record" "catalogue" {
   name    = "catalogue-dev.abdulqadir.shop"
   type    = "A"
   ttl     = 30
-  records = [aws_instance.catalogue.private_ip]
+  records = [aws_instance.Catalogue.private_ip]
 }
 
 resource "aws_instance" "redis" {
@@ -100,12 +100,12 @@ resource "aws_instance" "Cart" {
     }
 }
 
-resource "aws_route53_record" "cart" {
+resource "aws_route53_record" "Cart" {
   zone_id = "Z09687201RU9RU0QEJJY1"
   name    = "cart-dev.abdulqadir.shop"
   type    = "A"
   ttl     = 30
-  records = [aws_instance.cart.private_ip]
+  records = [aws_instance.Cart.private_ip]
 }
 
 resource "aws_instance" "mysql" {
