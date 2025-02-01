@@ -32,7 +32,6 @@ resource "aws_route53_record" "mongodb" {
   records = [aws_instance.frontend.private_ip]
 }
 
-
 resource "aws_instance" "Catalogue" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
