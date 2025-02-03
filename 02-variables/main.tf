@@ -20,7 +20,7 @@ variable "bool1" {
     default = true
 }
 
-variable "strl" {
+variable "str1" {
     default = "Hello"
 }
 
