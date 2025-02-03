@@ -17,8 +17,8 @@ variable "instances" {
 resource "aws_instance" "instance" {
      for_each = var.instances
     ami           = "ami-09c813fb71547fc4f"
-    instance_type = "t3.small"
-    vpc_security_group_ids = ["sg-0880ecf773230947b"]
+    instance_type = "t2.micro"
+    vpc_security_group_ids = ["sg-088e5b9464686ff19"]
     tags = {
         Name = each.key
       }
@@ -26,7 +26,7 @@ resource "aws_instance" "instance" {
 
 resource "aws_route53_record" "record" {
   count = length(var.instances)
-  zone_id = "Z09687201RU9RU0QEJJY1"
+  zone_id = "Z00064743L2THMADA4LWZ"
   name    = "${each.key}-dev.abdulqadir.shop"
   type    = "A"
   ttl     = "30"

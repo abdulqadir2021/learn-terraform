@@ -1,6 +1,6 @@
 resource "aws_instance" "test" {
   ami           = data.aws_ami.ami.id
-  instance_type = "t3.small"
+  instance_type = "t2.micro"
   vpc_security_group_ids = [data.aws_security_group.sg.id]
   tags = {
     Name = "test"
@@ -14,6 +14,6 @@ data "aws_ami" "ami" {
 }
 
 data "aws_security_group" "sg" {
-  name = "allow-all"
+  name = "Allow all: SG"
 }
 
