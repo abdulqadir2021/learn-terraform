@@ -23,5 +23,3 @@ module "route53" {
   ip_address = module.ec2[count.index].ip_address
 }
 
-
-
