@@ -185,3 +185,4 @@ resource "aws_route53_record" "dispatch" {
   records = [aws_instance.dispatch.private_ip]
 }
 
+

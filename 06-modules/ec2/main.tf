@@ -16,3 +16,4 @@ output "ip_address" {
 # Output in child module wont print on screen,
 # Output in root module will print on screen as output
 
+
