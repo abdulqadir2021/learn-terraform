@@ -1,7 +1,7 @@
 resource "aws_instance" "frontend" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t2.micro"
-    vpc_security_group_ids = ["sg-0246835708d5d8354"]
+    vpc_security_group_ids = ["sg-04b42790bbde7cf01"]
     tags = {
         Name = "frontend"
     }
@@ -18,7 +18,7 @@ resource "aws_route53_record" "frontend" {
 resource "aws_instance" "mongodb" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t2.micro"
-    vpc_security_group_ids = ["sg-0246835708d5d8354"]
+    vpc_security_group_ids = ["sg-04b42790bbde7cf01"]
     tags = {
         Name = "mongodb"
     }
@@ -35,7 +35,7 @@ resource "aws_route53_record" "mongodb" {
 resource "aws_instance" "Catalogue" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t2.micro"
-    vpc_security_group_ids = ["sg-0246835708d5d8354"]
+    vpc_security_group_ids = ["sg-04b42790bbde7cf01"]
     tags = {
         Name = "Catalogue"
     }
@@ -52,7 +52,7 @@ resource "aws_route53_record" "catalogue" {
 resource "aws_instance" "redis" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t2.micro"
-    vpc_security_group_ids = ["sg-0246835708d5d8354"]
+    vpc_security_group_ids = ["sg-04b42790bbde7cf01"]
     tags = {
         Name = "redis"
     }
@@ -69,7 +69,7 @@ resource "aws_route53_record" "redis" {
 resource "aws_instance" "user" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t2.micro"
-    vpc_security_group_ids = ["sg-0246835708d5d8354"]
+    vpc_security_group_ids = ["sg-04b42790bbde7cf01"]
     tags = {
         Name = "user"
     }
@@ -86,7 +86,7 @@ resource "aws_route53_record" "user" {
 resource "aws_instance" "Cart" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t2.micro"
-    vpc_security_group_ids = ["sg-0246835708d5d8354"]
+    vpc_security_group_ids = ["sg-04b42790bbde7cf01"]
     tags = {
         Name = "Cart"
     }
@@ -103,7 +103,7 @@ resource "aws_route53_record" "Cart" {
 resource "aws_instance" "mysql" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t2.micro"
-    vpc_security_group_ids = ["sg-0246835708d5d8354"]
+    vpc_security_group_ids = ["sg-04b42790bbde7cf01"]
     tags = {
         Name = "mysql"
     }
@@ -120,7 +120,7 @@ resource "aws_route53_record" "mysql" {
 resource "aws_instance" "shipping" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t2.micro"
-    vpc_security_group_ids = ["sg-0246835708d5d8354"]
+    vpc_security_group_ids = ["sg-04b42790bbde7cf01"]
     tags = {
         Name = "shipping"
     }
@@ -137,7 +137,7 @@ resource "aws_route53_record" "shipping" {
 resource "aws_instance" "rabbitmq" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t2.micro"
-    vpc_security_group_ids = ["sg-0246835708d5d8354"]
+    vpc_security_group_ids = ["sg-04b42790bbde7cf01"]
     tags = {
         Name = "rabbitmq"
     }
@@ -154,7 +154,7 @@ resource "aws_route53_record" "rabbitmq" {
 resource "aws_instance" "payment" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t2.micro"
-    vpc_security_group_ids = ["sg-0246835708d5d8354"]
+    vpc_security_group_ids = ["sg-04b42790bbde7cf01"]
     tags = {
         Name = "payment"
     }
@@ -171,7 +171,7 @@ resource "aws_route53_record" "payment" {
 resource "aws_instance" "dispatch" {
     ami           = "ami-09c813fb71547fc4f"
     instance_type = "t2.micro"
-    vpc_security_group_ids = ["sg-0246835708d5d8354"]
+    vpc_security_group_ids = ["sg-04b42790bbde7cf01"]
     tags = {
         Name = "dispatch"
     }
