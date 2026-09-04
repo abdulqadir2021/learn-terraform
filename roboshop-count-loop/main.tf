@@ -15,8 +15,8 @@ variable "instances" {
 
 resource "aws_instance" "instance" {
      count = length(var.instances)
-    ami           = "ami-09c813fb71547fc4f"
-    instance_type = "t2.micro"
+    ami           = "ami-0220d79f3f480ecf5"
+    instance_type = "t3.micro"
     vpc_security_group_ids = ["sg-0246835708d5d8354"]
     tags = {
         Name = var.instances[count.index]
