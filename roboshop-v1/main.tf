@@ -1,12 +1,10 @@
 resource "aws_instance" "frontend" {
     ami           = "ami-0220d79f3f480ecf5"
     instance_type = "t3.micro"
-
-
-#     vpc_security_group_ids = ["sg-04b42790bbde7cf01"]
-#     tags = {
-#         Name = "frontend"
-#     }
+    vpc_security_group_ids = ["sg-04b42790bbde7cf01"]
+    tags = {
+        Name = "frontend"
+    }
  }
 
 # resource "aws_route53_record" "frontend" {
