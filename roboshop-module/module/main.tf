@@ -8,7 +8,7 @@ resource "aws_instance" "instance" {
 }
 
 resource "aws_route53_record" "record" {
-  zone_id = "Z02974211891Z1NYIJSTE"
+  zone_id = "Z0272961EHM02ZV0QE8D"
   name    = "${var.component_name}-dev.abdulqadir.shop"
   type    = "A"
   ttl     = "30"
