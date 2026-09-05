@@ -1,3 +1,3 @@
 resource "null_resource" "demo" {
-    # count = 10
+    count = 10
      }
